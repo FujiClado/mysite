@@ -57,7 +57,11 @@ https://templatemo.com/tm-518-sentra
 
         <div class="sidebar-navigation hidde-sm hidden-xs">
             <div class="logo">
-                <a href="#"> Version 1 </a>
+              <?php
+                  $output = shell_exec('echo $HOSTNAME');
+                  echo "<h1><center><pre>$output</pre></center></h1>";
+                  echo "<h1><center>Version3</center></h1>"
+              ?>
             </div>
             <nav>
                 <ul>
