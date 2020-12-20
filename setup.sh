@@ -3,7 +3,7 @@
 ####################################################
 # installing packages
 ####################################################
-yum install httpd  php -y
+yum install httpd  php mariadb-server php-mysql -y
 
 
 ####################################################
@@ -20,6 +20,11 @@ echo "</FilesMatch>" >> /etc/httpd/conf.d/php.conf
 service httpd restart
 chkconfig httpd on
 
+####################################################
+# restarting mariadb
+####################################################
+service mariadb restart
+chkconfig mariadb on
 
 ####################################################
 # copying site contetn
